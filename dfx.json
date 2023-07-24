@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "icp_multisig_backend": {
+      "main": "src/icp_multisig_backend/main.mo",
+      "type": "motoko"
+    },
+    "icp_multisig_frontend": {
+      "dependencies": [
+        "icp_multisig_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/icp_multisig_frontend/src/index.html"
+      },
+      "source": [
+        "src/icp_multisig_frontend/assets",
+        "dist/icp_multisig_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
